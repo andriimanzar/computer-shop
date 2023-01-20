@@ -9,11 +9,11 @@ import model.Customer;
 import model.Order;
 import model.computer.PersonalComputer;
 
-public class ComputerPurchaseService {
+public class PurchaseService {
 
   private final Stock stock;
 
-  public ComputerPurchaseService(Stock stock) {
+  public PurchaseService(Stock stock) {
     this.stock = stock;
   }
 

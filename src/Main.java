@@ -3,7 +3,7 @@ import java.math.BigDecimal;
 import model.Customer;
 import model.Stock;
 import model.computer.PersonalComputer;
-import service.ComputerPurchaseService;
+import service.PurchaseService;
 
 public class Main {
 
@@ -21,11 +21,11 @@ public class Main {
     Customer customer = new Customer("Test", "Customer", "test_customer@gmail.com",
         BigDecimal.valueOf(5000));
 
-    ComputerPurchaseService computerPurchaseService = new ComputerPurchaseService(stock);
+    PurchaseService purchaseService = new PurchaseService(stock);
 
-    computerPurchaseService.purchase(customer, desktopComputer);
-    computerPurchaseService.purchase(customer, laptopComputer);
-    computerPurchaseService.purchase(customer, tabletComputer);
+    purchaseService.purchase(customer, desktopComputer);
+    purchaseService.purchase(customer, laptopComputer);
+    purchaseService.purchase(customer, tabletComputer);
 
     System.out.println(customer);
     customer.getOrderList().forEach(System.out::println);
