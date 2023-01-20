@@ -27,8 +27,10 @@ public class Main {
     purchaseService.purchase(customer, laptopComputer);
     purchaseService.purchase(customer, tabletComputer);
 
-    System.out.println(customer);
-    customer.getOrderList().forEach(System.out::println);
-    System.out.println(stock.getAvailableComputers().get(desktopComputer));
+    System.out.println(customer); // customer balance must change
+    customer.getOrderList().forEach(System.out::println); // customer should have 3 orders
+    System.out.println(
+        stock.getAvailableComputers().get(
+            desktopComputer)); // amount of computers must be one less(before purchase - 10, after - 9)
   }
 }
